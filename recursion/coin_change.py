@@ -17,7 +17,7 @@ def coin_change(c, pos, s):
         return 1
     if s < 0:
         return 0
-    if (pos <=0 and s >= 1):
+    if pos == 0:
         return 0
 
     return coin_change(c, pos-1, s) + coin_change(c, pos, s-c[pos-1])
